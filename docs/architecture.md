@@ -52,3 +52,36 @@ Object localization and spatial grounding.
 
 ### Cross-Modal Specialist
 Optical and SAR reasoning.
+
+## High-Level Architecture
+
+```mermaid
+flowchart TD
+
+A[User Query + Satellite Images]
+--> B[Input Validation]
+
+B --> C[Agent Planner]
+
+C --> D[Model Registry]
+
+D --> E1[LULC Specialist]
+D --> E2[VQA Specialist]
+D --> E3[Caption Specialist]
+D --> E4[Grounding Specialist]
+D --> E5[Change Detection Specialist]
+D --> E6[Optical SAR Specialist]
+
+E1 --> F[Evidence Engine]
+E2 --> F
+E3 --> F
+E4 --> F
+E5 --> F
+E6 --> F
+
+F --> G[Confidence Calibration]
+
+G --> H[LLM Synthesis]
+
+H --> I[Final Analysis Report]
+```
