@@ -8,6 +8,10 @@ OrbiLens AI (SatQuery AI) is an agentic vision-language remote sensing system bu
 
 The platform enables users to analyze satellite imagery using natural language queries. It combines specialist AI models, deterministic geospatial tools, and agentic orchestration to generate auditable and explainable geospatial insights.
 
+## Live Demo
+
+<img width="800" height="450" alt="Orbilens" src="https://github.com/user-attachments/assets/d565243d-46ec-4548-9291-6a02a550e03e" />
+
 ## Key Features
 
 - Land Use Land Cover (LULC) Classification
