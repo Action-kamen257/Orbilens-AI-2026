@@ -1,74 +1,100 @@
-# OrbiLens AI — SIH 2026
+# OrbiLens AI / SatQuery AI
 
-## SatQuery AI: Interactive Vision-Language Assistant for Multimodal Remote Sensing Image Analysis
+AI-Powered Agentic Remote Sensing Intelligence Platform
 
-OrbiLens is a project developed around the Smart India Hackathon 2026 problem statement *SIH26167 — SatQuery AI* by the **Indian Space Research Organisation (ISRO)** under the **Space Technology** theme.
-The project focuses on making remote-sensing image analysis more accessible through natural-language queries and an agentic AI workflow.
+## Overview
 
-## Project Overview
+OrbiLens AI (SatQuery AI) is an agentic vision-language remote sensing system built for Smart India Hackathon 2026 (SIH26167) under ISRO/SAC.
 
-Remote-sensing imagery is widely used for applications such as:
+The platform enables users to analyze satellite imagery using natural language queries. It combines specialist AI models, deterministic geospatial tools, and agentic orchestration to generate auditable and explainable geospatial insights.
 
-- Agriculture
-- Disaster management
-- Urban planning
-- Forest monitoring
-- Water-resource assessment
-- Infrastructure mapping
-- Environmental analysis
+## Key Features
 
-However, analysing satellite imagery can require knowledge of GIS, remote-sensing sensors, image-processing techniques, and specialized AI models.
-**OrbiLens** is based on the idea of providing an interactive natural-language interface through which a user can upload remote-sensing imagery and ask questions about it.
-The proposed system combines an agentic controller, remote-sensing specialist models, geospatial analysis tools, and an evidence engine to produce structured and evidence-grounded responses.
+- Land Use Land Cover (LULC) Classification
+- Remote Sensing Visual Question Answering (RSVQA)
+- Satellite Image Captioning
+- Referring Expression Grounding
+- Bi-Temporal Change Detection
+- Change Visual Question Answering
+- Optical + SAR Multi-Modal Analysis
+- Deterministic Geospatial Measurements
+- Explainable AI Outputs
+- Confidence Calibration
+- Report Generation (Markdown, HTML, JSON, PDF)
 
-##  Problem Statement
+## System Architecture
 
-### SIH26167 — SatQuery AI
+User Query + Satellite Images
+↓
+Validation Layer
+↓
+Agent Planner
+↓
+Specialist Model Selection
+↓
+Geospatial Evidence Engine
+↓
+LLM Synthesis Layer
+↓
+Explainable Results + Reports
 
-**Organization:** Indian Space Research Organisation (ISRO)  
-**Theme:** Space Technology  
-**Category:** Software
+## Core Models
 
-The problem focuses on developing an interactive vision-language assistant capable of analysing remote-sensing images through natural-language queries.
-Existing remote-sensing systems are often designed for individual tasks such as:
+| Component | Model |
+|------------|--------|
+| LULC | ResNet-50 |
+| Change Detection | BIT + Siamese ResNet-18 |
+| VQA | RSVQA Specialist |
+| Captioning | VRSBench Caption Specialist |
+| Grounding | VRSBench Grounding Specialist |
+| Cross Modal | Optical-SAR Specialist |
+| Orchestration | Agent Planner |
 
-- Land-cover classification
-- Object detection
-- Visual question answering
-- Change detection
+## Performance
 
-Users without specialized remote-sensing expertise may find it difficult to determine which model, sensor, or analysis method should be used for a particular question.
-The problem also highlights that a single image may not contain enough information. Analysis may require:
+### LULC Specialist
 
-- Multi-temporal imagery
-- Optical or multispectral imagery
-- SAR imagery
-- Co-registered optical-SAR pairs
+- Validation Accuracy: 91.79%
+- Test Accuracy: 91.67%
+- Validation Macro F1: 70.38%
 
+### Change Detection Specialist
 
-##  Proposed Solution
+- Overall Accuracy: 96.98%
+- F1 Score: 69.56%
+- IoU: 53.33%
 
-OrbiLens follows an agentic, query-driven approach.
+## Technology Stack
 
-Instead of requiring the user to manually select different remote-sensing models and tools, the system is designed to:
+### Frontend
 
-1. Understand the user's natural-language query.
-2. Validate the provided imagery.
-3. Determine the type of analysis required.
-4. Select appropriate specialist models and tools.
-5. Execute the required analysis.
-6. Collect and validate evidence.
-7. Combine the results.
-8. Generate a structured response.
+- Next.js
+- Firebase Hosting
 
-The overall investigation workflow is:
+### Backend
 
-1.**Upload & Ask**
-      
-2.**Plan**
-      
-3.**Analyze**
-      
-4.**Validate**
-      
-5.**Report**
+- FastAPI
+- Python
+
+### AI Frameworks
+
+- PyTorch
+- Transformers
+- PEFT / LoRA
+
+## Documentation
+
+- Architecture: docs/architecture.md
+- API: docs/api.md
+- Evaluation: docs/evaluation.md
+- Deployment: docs/deployment.md
+
+## Smart India Hackathon
+
+Problem Statement: SIH26167
+
+Organization: Indian Space Research Organisation (ISRO) / Space Applications Centre (SAC)
+
+## License
+
+MIT License
