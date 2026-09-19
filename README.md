@@ -10,7 +10,7 @@ The platform enables users to analyze satellite imagery using natural language q
 
 ## Live Demo
 
-assets/demo.gif
+![Demo/demo.gif
 
 ## Key Features
 
