@@ -53,3 +53,36 @@ POST /api/specialists/change
 POST /api/specialists/change-vqa
 
 POST /api/specialists/optical-sar
+
+## API Architecture
+
+```mermaid
+flowchart TD
+
+A[Frontend]
+
+A --> B[/api/investigate/]
+
+B --> C[Agent Planner]
+
+C --> D[LULC]
+C --> E[VQA]
+C --> F[Caption]
+C --> G[Grounding]
+C --> H[Change Detection]
+C --> I[Optical SAR]
+
+D --> J[Evidence Engine]
+E --> J
+F --> J
+G --> J
+H --> J
+I --> J
+
+J --> K[Report Generator]
+
+K --> L[Markdown]
+K --> M[HTML]
+K --> N[JSON]
+K --> O[PDF]
+```
