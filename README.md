@@ -10,7 +10,7 @@ The platform enables users to analyze satellite imagery using natural language q
 
 ## Live Demo
 
-<img width="800" height="450" alt="Orbilens" src="https://github.com/user-attachments/assets/d565243d-46ec-4548-9291-6a02a550e03e" />
+assets/demo.gif
 
 ## Key Features
 
